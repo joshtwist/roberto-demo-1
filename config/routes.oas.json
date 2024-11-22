@@ -55,6 +55,29 @@
         },
         "operationId": "c0e2b037-d975-4c50-b39c-f5451b00196f"
       }
+    },
+    "/foo": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get": {
+        "summary": "foo",
+        "description": "",
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://getting-started.zuplo.io"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "operationId": "c29edc09-b5bc-48b2-ae89-a58015a99e53"
+      }
     }
   }
 }
